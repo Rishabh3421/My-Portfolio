@@ -501,87 +501,116 @@ hr {
 body {
   font-family: 'Open Sans', sans-serif;
 }
-
-.chart {
-  clear: both;
-  padding: 0;
-  width: 100%;
+#skills-graph{
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    background: #FAFAFA;
 }
-
-.chart li {
-  display: inline-block;
-  width: 15%;
-  height: 425px;
-  margin: 0 1.8% 0 0;
-  position: relative;
-  text-align: center;
-  vertical-align: bottom;
-  border-radius: 4px 4px 0 0;
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+#skills-graph>h2{
+   width: fit-content;
+   position: absolute;
+   top: 15%;
+   right: 25%;
+   font-size: 3.5vh;
+   font-weight: 100;
 }
-
-.chart .axis {
-  display: inline-block;
-  width: 8%;
+.chart{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10vh;
 }
-
-.chart .label {
-  background: #ccc;
-  margin: -9px 0 71px 0;
+.chart>li{
+    list-style: none;
+    width: 8%;
 }
-
-.chart .percent {
-  letter-spacing: -3px;
-  opacity: 0.4;
-  width: 100%;
-  font-size: 1.875rem;
-  position: absolute;
-  bottom: 20px;
+.chart .axis{
+    line-height: 8vh;
+    text-align: right;
+    border-right: 1px solid rgba(0, 0, 0, 0.818);
 }
-
-.chart .percent span {
-  font-size: 1.875rem;
+.label{
+    font-size: 2vh;
+    margin-right: 10px;
 }
-
-.chart .skill {
-  font-weight: 800;
-  opacity: 0.5;
-  overflow: hidden;
-  text-transform: uppercase;
-  width: 100%;
-  font-size: 16px;
-  position: absolute;
-  bottom: 0;
+.percent{
+    font-size: 4vh;
+    color: #FAFAFA;
+    text-align: center;
+}
+.skill{
+    color: #FAFAFA;
+    text-align: center;
 }
 
 .chart .teal {
+    height: 40vh;
     background: #4ecdc4;
     border: 1px solid #4ecdc4;
     background-image: linear-gradient(to bottom, #b3e0d3, #4ecdc4 70%);
-    height: 70%;
   }
 
   .chart .salmon {
+    height: 37vh;
     background: #ff6b6b;
     border: 1px solid #ff6b6b;
     background-image: linear-gradient(to bottom, #ffdbdb, #ff6b6b 70%);
   }
   
   .chart .lime {
+    height: 27vh;
     background: #97f464;
     border: 1px solid #97f464;
     background-image: linear-gradient(to bottom, #e2f7cb, #97f464 70%);
   }
   
   .chart .peach {
+    height: 30vh;
     background: #ff9e2c;
     border: 1px solid #ff9e2c;
     background-image: linear-gradient(to bottom, #ffdfb3, #ff9e2c 70%);
   }
   
   .chart .grape {
+    height: 15vh;
     background: #ab64f4;
     border: 1px solid #ab64f4;
     background-image: linear-gradient(to bottom, #d8c8f7, #ab64f4 70%);
   }
   
+#story{
+ 
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20%;
+    gap: 40px;
+}
+#story-detail>p{
+    /* width: 70%; */
+}
+#story-detail{
+    width: 35%;
+}
+#story-detail>h2{
+    margin-bottom: 3vh;
+    font-size: 4vh;
+    font-weight: 100;
+}
+#story-detail>p{
+    margin-bottom: 3vh;
+    opacity: .7;
+}
+#story-detail>a{
+    margin-bottom: 3vh;
+    opacity: .7;
+    color: #000;
+}
+#story-image>img{
+    height: 300px;
+    border: 9px solid #efeded;
+    border-radius: 5px;
+}
