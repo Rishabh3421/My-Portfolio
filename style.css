@@ -891,15 +891,15 @@ label {
     }
 
     #navbar1 {
-        height: 35vh;
+        height: 45vh;
         width: 100%;
         background: #222222;
         /* background: red; */
         position: absolute;
-        /* z-index: 99; */
+        /* z-index: 9; */
         /* margin-left: -26%; */
         margin-left: 100%;
-        margin-top: 45vh;
+        margin-top: 55vh;
         /* overflow-x: hidden; */
         display: flex;
         align-items: flex-start;
