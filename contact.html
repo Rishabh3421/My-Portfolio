@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <title>Contact</title>
 </head>
 
@@ -46,19 +47,100 @@
             </div>
         </div>
     </div>
-    <div id="contacts">
-        <div id="left">
-            <h1>contact.</h1>
-            <h3>Get in touch with me via social media or email.</h3>
-            <div id="social-icons">
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-                <a href="">Linkdin</a>
-                <a href="">Tweeter</a>
-            </div>
+    <div id="contact-page">
+        <div id="left-contact">
+            <h2>contact.</h2>
+            <h4>Get in touch with me via social media or email.</h4>
+            <ul>
+                <div id="social">
+                    <div id="social1">
+                        <div id="logo">
+                            <i class="ri-facebook-circle-line"></i>
+                            <li>Facebook</li>
+                        </div>
+                        <div id="logo">
+                            <i class="ri-instagram-line"></i>
+                            <li>Instagram</li>
+                        </div>
+                    </div>
+                    <div id="social2">
+                        <div id="logo">
+                            <i class="ri-twitter-line"></i>
+                            <li>Twitter</li>
+                        </div>
+                        <div id="logo">
+                            <i class="ri-linkedin-box-fill"></i>
+                            <li>LinkedIn</li>
+                        </div>
+                    </div>
+                </div>
+            </ul>
         </div>
-        <div id="right"></div>
+        <div id="right-contact">
+            <img src="./images/hero1.png" alt="">
+        </div>
     </div>
+    <div id="hr3"></div>
+
+    <div id="messages">
+
+        <h2>Send me an email</h2>
+        <form id="contactForm">
+            <div id="left-side">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div id="right-side">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="button" onclick="sendMessage()">Send Message</button>
+            </div>
+            
+        </form>
+        <footer>
+            <div id="copyright">©2024 Rishabh Mishra</div>
+           <img src="./images/uparrow.png" alt="uparrow">
+            <div id="sections2">
+                <a href="#home">
+                    <h3>Home</h3>
+                </a>
+                <a href="#about">
+                    <h3>About</h3>
+                </a>
+                <a href="#projects">
+                    <h3>Projects</h3>
+                </a>
+                <a href="#contact">
+                    <h3>Contact</h3>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                // Simulate sending email (replace this with actual server-side logic)
+                alert("Message sent successfully!");
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
