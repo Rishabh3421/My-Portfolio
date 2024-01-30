@@ -88,3 +88,17 @@ tl.from('#right-data', {
 // Play the timeline
 tl.play();
 
+document.addEventListener("DOMContentLoaded", function() {
+    var navbar = document.getElementById("navbar1");
+    var menuIcon = document.querySelector(".ri-menu-line");
+
+    menuIcon.addEventListener("click", function() {
+        toggleNavbar();
+    });
+
+    function toggleNavbar() {
+        navbar.style.transition = "margin-left 0.5s ease"; 
+        var currentMarginLeft = parseInt(navbar.style.marginLeft) || 0;
+        navbar.style.marginLeft = (currentMarginLeft === -25) ? "100%" : "-25%";
+    }
+});
