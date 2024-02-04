@@ -11,9 +11,12 @@ body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+    cursor: none; 
 
 }
-
+:hover{
+    cursor: none;
+}
 ::selection {
     background: black;
     color: #ffffff;
@@ -21,11 +24,12 @@ body {
 
 #main {
     width: 100%;
+
 }
 
 #home {
     width: 100%;
-    height: 130vh;
+    height: fit-content;
 }
 
 #nav {
@@ -36,6 +40,8 @@ body {
     justify-content: space-between;
     background: #000;
     height: 10vh;
+    z-index: 100;
+    position: relative;
 }
 
 #nav img {
@@ -72,7 +78,9 @@ body {
 #social-icons>a:hover {
     opacity: .7;
 }
-
+#navbar1{
+    display: none;
+}
 #social-icons>a>i {
     font-size: 27px;
     color: #fff;
@@ -105,13 +113,15 @@ body {
     display: flex;
     gap: 30px;
 }
-
+.ri-menu-line{
+    z-index: 99;
+}
 #hero-image {
     position: absolute;
     top: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+z-index: -1;
 }
 
 #left-image>img {
@@ -283,31 +293,31 @@ footer>img:hover {
 }
 
 #projects>#cards {
-    height: 25vh;
-    width: 33%;
-    border: 1px solid rgba(0, 0, 0, 0.329);
-    padding: 5px 5px;
+    height: fit-content;
+    width: 100%;
+    border: none;
+    padding: 10px;
 }
 
-#cards>img {
-    height: 170px;
+#cards>a>img {
+    height: 20vh;
     width: 100%;
     background-size: cover;
 }
 
 #cards>h2 {
-    font-size: 16px;
+    font-size: 2vh;
     font-weight: 100;
     opacity: .9;
     padding: 10px 5px;
 }
 
 #cards>p {
-    font-size: 13px;
+    font-size: 1.5vh  ;
     font-weight: 100;
     opacity: .6;
     margin-left: 5px;
-    margin-top: -8px;
+    margin-top: -2px;
 }
 
 #cards {
@@ -320,27 +330,12 @@ footer>img:hover {
 #cards:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     scale: 1.1;
+    cursor: none;
 }
+#cards>a>img:hover{
+    cursor: none;
 
-
-/* * {
-    scrollbar-width: thin;
-    scrollbar-color: #000;
 }
-
-*::-webkit-scrollbar {
-    width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-    background: #0000;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #171717;
-    border-radius: 10px;
-    border: 1px solid #2f2f2fe8;
-} */
 
 #about {
    display: flex;
@@ -404,15 +399,17 @@ hr {
     overflow: hidden;
     border-radius: 5px;
     transition: all ease .5s;
-
 }
 
 .img-container>img {
-    width: 100%;
-    height: 100px;
+    width:100%;
+    height:200px;
     display: block;
     filter: brightness(.9);
     border-radius: 5px;
+    object-fit: cover;
+    object-position: top;
+
 }
 
 .img-container:hover {
@@ -507,6 +504,7 @@ hr {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    cursor: block;
 }
 
 #skills-graph {
@@ -602,7 +600,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 20%;
-    gap: 40px;
+    gap: 90px;
 }
 
 #story-detail>p {
@@ -648,7 +646,7 @@ body {
 #left-contact>h2 {
     font-size: 10vh;
     letter-spacing: -7px;
-    margin-bottom: 3vh;
+    margin-bottom: 6vh;
 }
 
 #left-contact>h4 {
@@ -671,13 +669,16 @@ body {
     gap: 30px;
 }
 
-#logo {
+#logo>a {
     display: flex;
-    font-size: 3vh;
     text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.8vw;
+    opacity: .8;
 }
 
-#logo>li {
+#logo>a>li {
     list-style: none;
     margin-left: 10px;
     font-weight: 500;
@@ -739,9 +740,8 @@ label {
     font-weight: 100;
 }
 
-#navbar1 {
-    display: none;
-}
+
+
 
 #right-side>button {
     margin-left: 72.5%;
@@ -751,14 +751,17 @@ label {
 
 @media only screen and (max-width: 600px) {
 
-    /* body{
-        overflow-y: hidden;
-    } */
+    body{
+        overflow-x: hidden;
+        cursor: none;
+    }
     #nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        background: #000;
+        position: relative;
+        z-index: 100;
     }
 
     #nav>img {
@@ -778,6 +781,7 @@ label {
 
     #main {
         overflow-x: hidden;
+        /* height: 100%; */
     }
 
     #hero-image {
@@ -822,7 +826,7 @@ label {
     #hero-section {
         margin-top: -26.5vh;
         position: relative;
-        /* z-index: -1; */
+        z-index: -1;
     }
 
     #hero-image {
@@ -889,21 +893,19 @@ label {
     }
 
     #navbar1 {
-        height: 45vh;
+        height: 49vh;
         width: 100%;
         background: #222222;
-        /* background: red; */
         position: absolute;
-        z-index: 9;
-        /* margin-left: -26%; */
+        z-index: -10; 
         margin-left: 100%;
-        margin-top: 55vh;
-        /* overflow-x: hidden; */
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
+        margin-top: 100%;
     }
+    
 
     #navbar1>a {
         color: #fff;
@@ -954,7 +956,6 @@ label {
         scale: 1.2;
     }
 
-
     #about {
         display: flex;
         /* background: red; */
@@ -995,7 +996,7 @@ label {
     justify-content: center;
     flex-direction: column;
     height: fit-content;
-    margin: 10vh 0;
+    margin: 15vh 0;
     gap: 5vh;
     text-align: center;
     line-height: 4vh;
@@ -1006,10 +1007,10 @@ label {
     justify-content: center;
     flex-direction: column;
     height: fit-content;
-    margin: 10vh 0;
-    gap: 5vh;
+    margin: 15vh 0;
+    gap: 10vh;
     text-align: center;
-    line-height: 4vh;
+    line-height: 3vh;
     margin-left: 5%;
 }
 #left-fact>img{
@@ -1066,14 +1067,27 @@ margin-top: 10vh;
 #left-contact>h2{
     margin-left: -15%;
     font-size: 20vw;
+    margin-bottom: 1.5vh;
 }
 #social{
     margin-top: -5vh;
+    
 }
 #right-contact>img{
     height: 40vh;
     margin-top: -10vh;
 }
+#logo>a {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 5vw;
+    opacity: .8;
+    margin-top:1vh;
+
+}
+
 #hr3{
     margin-top: -17.5vh;
 }
@@ -1102,8 +1116,127 @@ margin-top: 10vh;
    margin-top: 5vh;
    margin-bottom: -2vh;
 }
+#projects-header1{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+   padding: 50px;
+   height: fit-content;
+   flex-wrap: wrap;
+   
+
+  }
+  #left-header1{
+   
+  
+  }
+
+  #left-header1>h1{
+  /* font-size: 4px; */
+  
+  }
+  #left-header1>p{
+    /* font-size: 50px; */
+    
+  }
+  #right-header2>img{
+    margin-bottom: 13vh;
+    height: 50vw;
+  }
+
+
 }
 
-@media only screen and (min-width: 601px) and (max-width: 768px) {}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+}
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {}
+
+.kite {
+    width: 50px;
+    height: 50px;
+    background: url('./images/cursor.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    transform-origin: center;
+    pointer-events: none; 
+    z-index: 99;
+  }
+  button:hover{
+    cursor: none;
+  }
+  #projects-header1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    opacity: .8;
+    gap: 50px;
+}
+
+
+
+#left-header1 > h1 {
+    font-size: 5em; /* Default font size for larger screens */
+
+    @media only screen and (max-width: 768px) {
+        font-size: 5em; /* Adjust font size for screens up to 768px width */
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 3em; /* Adjust font size for screens up to 480px width */
+    }
+
+    margin-bottom: 2vh;
+}
+
+#left-header1 > p {
+    font-size: 1em; /* Default font size for larger screens */
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1em; /* Adjust font size for screens up to 768px width */
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 1em; /* Adjust font size for screens up to 480px width */
+    }
+}
+
+#right-header>img{
+    
+    /* background: gold; */
+}
+
+
+#overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; 
+    display: flex;
+}
+
+#bar {
+    width: 10vw;
+    height: 105vh;
+    background: #1a1a1a;
+}
+
+#counter>h1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 2;
+    color: azure;
+    padding: .2em .4em;
+    font-family: sans-serif;
+    font-size: 15vw;
+}
+
+

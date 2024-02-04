@@ -8,15 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <title>Portfolio WebSite</title>
+    <title>My Portfolio</title>
 </head>
 <style>
-    footer{
+    /* footer {
         margin-top: 50vh;
-    }
+    } */
 </style>
 
 <body>
+  <div class="kite" id="kite"></div>
+  <!-- <div id="counter">
+    <h1>0</h1>
+</div>
+
+<div id="overlay">
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+    <div id="bar"></div>
+</div> -->
     <div id="main">
         <div id="home">
             <div id="nav">
@@ -29,7 +46,7 @@
                         <a href="/about.html">
                             <h3>About</h3>
                         </a>
-                        <a href="#projects">
+                        <a href="/projects.html">
                             <h3>Projects</h3>
                         </a>
                         <a href="/contact.html">
@@ -62,7 +79,7 @@
                     <a href="/about.html">
                         <h3>About</h3>
                     </a>
-                    <a href="#projects">
+                    <a href="/projects.html">
                         <h3>Projects</h3>
                     </a>
                     <a href="/contact.html">
@@ -86,7 +103,7 @@
                         </a>
                     </div>
                 </div>
-                            
+
             </div>
             <div id="hero-section">
                 <div id="hero-image">
@@ -99,14 +116,15 @@
                 </div>
                 <div id="titles">
                     <div id="right-title">
-                        <h1>designer</h1>
-                        <p>Product designer specialising in UI design and design systems.</p>
+                        <h1>Frontend</h1>
+                        <p>UI design and responsive web development expert.</p>
                     </div>
                     <div id="left-title">
-                        <h1><span class="chevron-left">&lt;</span>coder<span class="chevron-right">&gt;</span></h1>
-                        <p>Front end developer who writes clean, elegant and efficient code.</p>
+                        <h1><span class="chevron-left">&lt;</span>Backend<span class="chevron-right">&gt;</span></h1>
+                        <p>Writes robust server-side code, excels in database management.</p>
                     </div>
                 </div>
+                
             </div>
             <div id="work">
                 <div id="works">
@@ -114,49 +132,54 @@
                 </div>
                 <div id="projects">
                     <div id="cards">
-                        <img src="./images/site1.png" alt="">
-                        <h2>CREATIVE DEVELOPER</h2>
+                        <a href="https://soft-gaufre-6764a5.netlify.app/"  target="_blank">
+                            <img src="./images/projects/david jung.png" alt="">
+                        </a>
+                        <h2>David Gives funks</h2>
                         <p>modern design</p>
                     </div>
                     <div id="cards">
-                        <img src="./images/site2.png" alt="">
-                        <h2>DAVID CHANG</h2>
+                        <a href="https://main--retrowebsite123.netlify.app/"  target="_blank">
+                            <img src="./images/projects/miranda.png" alt="">
+                        </a>
+                        <h2>Miranda</h2>
                         <p>landing page</p>
                     </div>
                     <div id="cards">
-                        <img src="./images/site3.png" alt="">
-                        <h2>FLUTTE GYM</h2>
-                        <p>Gym Website</p>
+                        <a href="https://rejoin-design.vercel.app/"  target="_blank">
+                            <img src="./images/projects/rejouice.png" alt="">
+                        </a>
+                        <h2>All about Rejouice</h2>
+                        <p>Rejouice Website</p>
                     </div>
                 </div>
             </div>
         </div>
         <footer>
             <div id="copyright">©2024 Rishabh Mishra</div>
-           <img src="./images/uparrow.png" alt="uparrow">
+            <img src="./images/uparrow.png" alt="uparrow">
             <div id="sections2">
-                <a href="#home">
+                <a href="/index.html">
                     <h3>Home</h3>
                 </a>
-                <a href="#about">
+                <a href="/about.html">
                     <h3>About</h3>
                 </a>
-                <a href="#projects">
+                <a href="/projects.html">
                     <h3>Projects</h3>
                 </a>
-                <a href="#contact">
+                <a href="/contact.html">
                     <h3>Contact</h3>
                 </a>
             </div>
         </footer>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-    integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
-  <script src="script.js"></script> 
+
+<script src="script.js"></script>
 
 </html>
