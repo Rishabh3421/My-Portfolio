@@ -402,7 +402,7 @@ hr {
 }
 
 .img-container>img {
-    width:100%;
+    width:150px;
     height:200px;
     display: block;
     filter: brightness(.9);
